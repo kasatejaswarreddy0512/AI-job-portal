@@ -1,0 +1,98 @@
+package com.ktsr.job.repository;
+
+import com.ktsr.job.domain.JobStatus;
+import com.ktsr.job.model.Job;
+import com.ktsr.job.payload.JobSearchRequest;
+import jakarta.persistence.criteria.Path;
+import jakarta.persistence.criteria.Predicate;
+import org.springframework.data.jpa.domain.Specification;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class JobSpecification {
+
+    private JobSpecification() {
+    }
+
+    public static Specification<Job> build(JobSearchRequest request) {
+        return (root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+
+            predicates.add(cb.isTrue(root.get("active")));
+
+            JobStatus status = request.getJobStatus() != null ? request.getJobStatus() : JobStatus.OPEN;
+            predicates.add(cb.equal(root.get("status"), status));
+
+            if (request.getJobType() != null) {
+                predicates.add(cb.equal(root.get("jobType"), request.getJobType()));
+            }
+
+            if (request.getWorkMode() != null) {
+                predicates.add(cb.equal(root.get("workMode"), request.getWorkMode()));
+            }
+
+            if (request.getExperienceLevel() != null) {
+                predicates.add(cb.equal(root.get("experienceLevel"), request.getExperienceLevel()));
+            }
+
+            if (request.getCompanyId() != null) {
+                predicates.add(cb.equal(root.get("companyId"), request.getCompanyId()));
+            }
+
+            if (request.getCategoryId() != null) {
+                predicates.add(cb.equal(root.get("category").get("id"), request.getCategoryId()));
+            }
+
+            if (request.getLocation() != null && !request.getLocation().isBlank()) {
+                String pattern = "%" + request.getLocation().toLowerCase() + "%";
+                Path<String> city = root.get("location").get("city");
+                Path<String> state = root.get("location").get("state");
+                Path<String> country = root.get("location").get("country");
+
+                predicates.add(cb.or(
+                        cb.like(cb.lower(city), pattern),
+                        cb.like(cb.lower(state), pattern),
+                        cb.like(cb.lower(country), pattern)
+                ));
+            }
+
+            if (request.getMinSalary() != null) {
+                predicates.add(cb.greaterThanOrEqualTo(
+                        root.get("salaryRange").get("minSalary"), request.getMinSalary()
+                ));
+            }
+
+            if (request.getMaxSalary() != null) {
+                predicates.add(cb.lessThanOrEqualTo(
+                        root.get("salaryRange").get("maxSalary"), request.getMaxSalary()
+                ));
+            }
+
+            if (request.getMinOpenings() != null) {
+                predicates.add(cb.greaterThanOrEqualTo(root.get("openings"), request.getMinOpenings()));
+            }
+
+            if (request.getMaxOpenings() != null) {
+                predicates.add(cb.lessThanOrEqualTo(root.get("openings"), request.getMaxOpenings()));
+            }
+
+            //todo : filter for tags , skills
+
+            if (request.getKeyWord() != null && !request.getKeyWord().isBlank()) {
+                String keyword = "%" + request.getKeyWord().toLowerCase() + "%";
+
+                predicates.add(cb.or(
+                        cb.like(cb.lower(root.get("title")), keyword),
+                        cb.like(cb.lower(root.get("jobDescription")), keyword),
+                        cb.like(cb.lower(root.get("requirements")), keyword),
+                        cb.like(cb.lower(root.get("responsibilities")), keyword)
+                ));
+            }
+
+            return cb.and(predicates.toArray(new Predicate[0]));
+
+        };
+    }
+}

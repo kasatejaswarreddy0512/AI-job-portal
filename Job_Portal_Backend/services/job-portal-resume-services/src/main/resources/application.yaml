@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: job-portal-resume-services
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/job_portal_resume_db?createDatabaseIfNotExist=true
+    username: root
+    password: Teja@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+
+server:
+  port: 8084
