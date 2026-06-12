@@ -78,7 +78,7 @@ public class JobSpecification {
                 predicates.add(cb.lessThanOrEqualTo(root.get("openings"), request.getMaxOpenings()));
             }
 
-            //todo : filter for tags , skills
+
 
             if (request.getKeyWord() != null && !request.getKeyWord().isBlank()) {
                 String keyword = "%" + request.getKeyWord().toLowerCase() + "%";

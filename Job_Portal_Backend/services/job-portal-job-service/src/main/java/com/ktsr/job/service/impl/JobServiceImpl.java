@@ -36,7 +36,7 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public JobResponse createJob(Long employerId, JobRequest request) {
-        //todo to fetch company by employerId
+
 
         JobCategory category=categoryService.getCategoryEntityById(request.getCategoryId());
 
@@ -185,7 +185,7 @@ public class JobServiceImpl implements JobService {
 
 
     private JobResponse convertToResponse(Job savedJob) {
-        //todo : fetch company response
+
         CompanyResponse companyResponse = CompanyResponse.builder()
                 .id(savedJob.getCompanyId())
                 .build();
