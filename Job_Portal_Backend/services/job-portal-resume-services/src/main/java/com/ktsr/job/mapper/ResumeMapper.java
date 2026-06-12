@@ -3,6 +3,7 @@ package com.ktsr.job.mapper;
 import com.ktsr.job.dto.*;
 import com.ktsr.job.model.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ResumeMapper {
@@ -98,7 +99,11 @@ public class ResumeMapper {
                 .id(project.getId())
                 .title(project.getTitle())
                 .description(project.getDescription())
-                .technologies(project.getTechnologies())
+                .technologies(
+                        project.getTechnologies() == null
+                                ? new ArrayList<>()
+                                : new ArrayList<>(project.getTechnologies())
+                )
                 .projectUrl(project.getProjectUrl())
                 .sourceCodeUrl(project.getSourceCodeUrl())
                 .startDate(project.getStartDate())

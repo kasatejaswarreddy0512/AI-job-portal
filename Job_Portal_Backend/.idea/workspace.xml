@@ -4,14 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeb26fc3-67ca-4929-9f2e-416c6c95b17b" name="Changes" comment="" />
+    <list default="true" id="eeb26fc3-67ca-4929-9f2e-416c6c95b17b" name="Changes" comment="job portal services">
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/AwardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/AwardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/CertificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/CertificationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/EducationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/EducationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/LanguageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/LanguageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/PersonalInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/PersonalInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/ProjectResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/ProjectResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/ResumeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/ResumeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/ResumeSkillResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/ResumeSkillResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/WorkExperienceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/ktsr/job/dto/WorkExperienceResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/JobPortalResumeServicesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/JobPortalResumeServicesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/mapper/ResumeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/mapper/ResumeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/mapper/WorkExperienceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/mapper/WorkExperienceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Award.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Award.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Certification.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Certification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/PersonalInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/Resume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/ResumeSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/ResumeSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/WorkExperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/model/WorkExperience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/service/impl/ResumeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/java/com/ktsr/job/service/impl/ResumeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/services/job-portal-resume-services/src/main/resources/application.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="174" />
+    <option name="cachedIndexableFilesCount" value="197" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,6 +54,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kasatejaswarreddy0512&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kasatejaswarreddy0512/AI-job-portal.git&quot;,
+    &quot;accountId&quot;: &quot;a9479132-5fd5-40d9-b732-7a2be865c922&quot;
+  }
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -45,42 +86,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.JobPortalCompanyServiceApplication.executor": "Run",
-    "Spring Boot.JobPortalJobServiceApplication.executor": "Run",
-    "Spring Boot.JobPortalResumeServicesApplication.executor": "Run",
-    "Spring Boot.JobPortalUserServiceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Project/Job Portal/AI  Job Portal System/Job_Portal_Backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "service.view.auto.scroll.to.source": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.JobPortalCompanyServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.JobPortalJobServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.JobPortalResumeServicesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.JobPortalUserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/Job Portal/AI  Job Portal System/Job_Portal_Backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ktsr.job.repository" />
@@ -183,12 +225,26 @@
       <workItem from="1780919297367" duration="7775000" />
       <workItem from="1781016027395" duration="8897000" />
       <workItem from="1781068011027" duration="13460000" />
-      <workItem from="1781193609544" duration="9169000" />
+      <workItem from="1781193609544" duration="9463000" />
+      <workItem from="1781242921531" duration="8872000" />
     </task>
+    <task id="LOCAL-00001" summary="job portal services">
+      <option name="closed" value="true" />
+      <created>1781203025249</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1781203025249</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="job portal services" />
+    <option name="LAST_COMMIT_MESSAGE" value="job portal services" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

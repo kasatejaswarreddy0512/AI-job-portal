@@ -3,6 +3,8 @@ package com.ktsr.job.mapper;
 import com.ktsr.job.dto.WorkExperienceResponse;
 import com.ktsr.job.model.WorkExperience;
 
+import java.util.ArrayList;
+
 public class WorkExperienceMapper {
 
     public static WorkExperienceResponse toWorkExperienceResponse(WorkExperience workExperience) {
@@ -20,7 +22,11 @@ public class WorkExperienceMapper {
                 .endDate(workExperience.getEndDate())
                 .isCurrentJob(workExperience.getIsCurrentJob())
                 .description(workExperience.getDescription())
-                .technologies(workExperience.getTechnologies())
+                .technologies(
+                        workExperience.getTechnologies() == null
+                                ? new ArrayList<>()
+                                : new ArrayList<>(workExperience.getTechnologies())
+                )
                 .displayOrder(workExperience.getDisplayOrder())
                 .build();
     }

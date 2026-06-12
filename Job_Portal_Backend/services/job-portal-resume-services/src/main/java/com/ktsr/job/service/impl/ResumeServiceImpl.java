@@ -9,8 +9,11 @@ import com.ktsr.job.model.WorkExperience;
 import com.ktsr.job.payload.ResumeRequest;
 import com.ktsr.job.repository.*;
 import com.ktsr.job.service.ResumeService;
+
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -62,8 +65,14 @@ public class ResumeServiceImpl implements ResumeService {
     }
 
 
+//    @Transactional(readOnly = true)
+    @Cacheable(
+            value = "resumes",
+            key = "#candidateId"
+    )
     @Override
     public List<ResumeResponse> getMyResumes(Long candidateId) {
+        simulateSlowDBCall();
         return resumeRepository.findByCandidateIdAndIsActiveTrue(candidateId)
                 .stream().map(this::buildFullResponse)
                 .collect(Collectors.toList());
@@ -195,6 +204,21 @@ public class ResumeServiceImpl implements ResumeService {
     private void assertOwner(Resume resume, Long candidateId) {
         if (!resume.getCandidateId().equals(candidateId)) {
             throw new IllegalArgumentException("candidate id does not match");
+        }
+    }
+
+    @Cacheable("test")
+    public String test(){
+        simulateSlowDBCall();
+        return "Hello redis Test";
+    }
+
+
+    private void simulateSlowDBCall(){
+        try{
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 }
